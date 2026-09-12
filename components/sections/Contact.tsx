@@ -1,10 +1,43 @@
 "use client";
 
+import { useState } from "react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { AnimatedMeshGradient } from "@/components/ui/AnimatedMeshGradient";
 import { Button } from "@/components/ui/Button";
 
 export function Contact() {
+  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus("submitting");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/dileepkumarreddy2007@gmail.com", {
+        method: "POST",
+        body: formData,
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        form.reset();
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 5000);
+      }
+    } catch (error) {
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
+  };
+
   return (
     <footer id="contact" className="relative min-h-[80vh] md:min-h-[90vh] w-full flex flex-col items-center justify-center overflow-hidden bg-white">
       
@@ -68,8 +101,7 @@ export function Contact() {
             <div className="lg:col-span-1 flex flex-col justify-center">
               <ScrollReveal delay={0.4}>
                 <form 
-                  action="https://formsubmit.co/dileepkumarreddy2007@gmail.com" 
-                  method="POST"
+                  onSubmit={handleSubmit}
                   className="flex flex-col gap-5 bg-white/50 backdrop-blur-md border border-[var(--color-border)] p-8 rounded-2xl shadow-sm"
                 >
                   {/* FormSubmit Configuration */}
@@ -89,8 +121,12 @@ export function Contact() {
                     <label htmlFor="message" className="text-[10px] font-bold tracking-[0.15em] text-[var(--color-text-heading)] uppercase">Message</label>
                     <textarea id="message" name="message" rows={4} placeholder="Tell me about your project..." className="w-full bg-transparent border-b border-[var(--color-border)] py-2 text-sm focus:outline-none focus:border-[var(--color-accent-green)] transition-colors placeholder:text-[var(--color-text-muted)] text-[var(--color-text-heading)] resize-none" required></textarea>
                   </div>
-                  <button type="submit" className="mt-4 w-full bg-black text-white px-6 py-4 text-xs font-bold tracking-[0.15em] hover:bg-[var(--color-accent-green)] transition-colors uppercase">
-                    Send Message
+                  <button 
+                    type="submit" 
+                    disabled={status === "submitting"}
+                    className="mt-4 w-full bg-black text-white px-6 py-4 text-xs font-bold tracking-[0.15em] hover:bg-[var(--color-accent-green)] transition-colors uppercase disabled:opacity-50"
+                  >
+                    {status === "submitting" ? "Sending..." : status === "success" ? "Sent!" : status === "error" ? "Error, Try Again" : "Send Message"}
                   </button>
                 </form>
               </ScrollReveal>

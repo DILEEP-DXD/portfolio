@@ -39,13 +39,13 @@ export function Navbar() {
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-16">
           
           {/* Logo */}
-          <Link 
+          <a 
             href="#hero" 
             className={`text-sm font-bold tracking-[0.08em] z-[60] transition-colors duration-300 ${menuOpen ? "text-white" : "text-[var(--color-text-heading)]"}`} 
             onClick={() => setMenuOpen(false)}
           >
             DK <span className={`hidden md:inline transition-colors duration-300 ${menuOpen ? "text-white/50" : "text-[var(--color-text-muted)]"}`}>/ DILEEP KUMAR</span>
-          </Link>
+          </a>
           
           {/* Menu Toggle */}
           <button 
@@ -73,7 +73,7 @@ export function Navbar() {
       >
         <nav className="flex flex-col items-center gap-5 md:gap-6">
           {navigation.map((item, i) => (
-            <Link 
+            <a 
               key={item.href} 
               href={item.href} 
               onClick={() => setMenuOpen(false)} 
@@ -81,7 +81,7 @@ export function Navbar() {
               style={{ transitionDelay: `${menuOpen ? i * 60 + 100 : 0}ms` }}
             >
               {item.label}
-            </Link>
+            </a>
           ))}
         </nav>
         
