@@ -1,45 +1,40 @@
-# DILEEP KUMAR // PORTFOLIO
+# Dileep Kumar
 
-A highly minimal, editorial-style personal portfolio built to showcase engineering execution, data structures & algorithms expertise, and foundational technical skills. Designed with a strict black-and-white aesthetic, modern typography, and subtle micro-animations.
+Hey, I'm Dileep — a CS/AI-ML student at Lovely Professional University. I like taking messy, complex problems and turning them into things that actually run: automation pipelines, RAG-based tools, and small agents that do the boring parts of my day for me. 
 
-## 🚀 Tech Stack
+*I'd rather automate the boring part than do it twice.*
 
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Animation**: [Framer Motion](https://www.framer.com/motion/)
-- **Deployment**: [GitHub Pages](https://pages.github.com/)
+## 🎯 What I Do
+I build AI-powered apps and automation — from RAG pipelines to Telegram bots that save people time. I am currently building toward a GenAI application development role and shipping new experiments regularly.
 
-## 🎨 Design Philosophy
+## 🛠️ Skills & Technologies
+- **Languages**: Python, C++, C, Java, JavaScript
+- **AI / ML & GenAI**: OpenAI API, Gemini API, Whisper, LangChain, RAG Pipelines
+- **Backend & Data**: Node.js, FastAPI, Supabase, REST APIs
+- **Tools & Automation**: Git, Playwright, Telegram Bots, GitHub Actions
 
-- **Editorial & Clean**: Stripped back visual noise. Relies on structured typography, thin borders, and white space to communicate technical depth.
-- **Fluid Motion**: Continuous progress bars, fluid word transitions, and subtle hover-lift interactions make the site feel responsive without being flashy.
-- **Developer-Centric**: Features a monospace-heavy aesthetic reminiscent of IDEs and technical blueprints.
+## 🚀 Featured Projects
 
-## 🛠️ Running Locally
+### Flow Me (Dec '25)
+A multi-agent research workflow that plans a question, finds sources, and synthesizes a structured answer automatically. 
+- **Tech**: Python, Gemini API, Google Custom Search API, Multi-Agent Architecture
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/DILEEP-DXD/portfolio.git
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
-4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Sea-Tra (Jun '26)
+An automated lecture recovery pipeline that captures CodeTantra recordings, transcribes them with Whisper, and turns missed classes into practical summaries delivered directly via Telegram.
+- **Tech**: Python, Playwright, Whisper, Groq API, Telegram Bot API
 
-## 📦 Deployment
+### Music Playlist Manager (Jul '26)
+A flexible playback system built entirely from core data structures (not standard libraries) that supports smooth, continuous forward/backward navigation, dynamic insertion, and traversal.
+- **Tech**: C++, Circular Doubly Linked List, FIFO Queue
 
-This project is configured to be exported statically and deployed automatically to GitHub Pages via GitHub Actions whenever code is pushed to the `master` branch.
+## 🎓 Education & Training
+- **B.Tech CSE (AI/ML)** - Lovely Professional University (Aug '24 – Present)
+- **Data Structures & Algorithms with C++** - Mastered core DSA concepts and Big-O analysis.
+- **Google Agents Intensive** - Kaggle badge & certification for advanced agent development.
 
-To trigger a deployment manually:
-1. Navigate to the **Actions** tab in your GitHub repository.
-2. Select **Deploy Next.js site to Pages**.
-3. Click **Run workflow**.
+## 📬 Let's Connect
+Open to GenAI engineering projects, internships, collaborations and interesting technical problems.
 
----
-
-*Designed and engineered by Dileep Kumar.*
+- **GitHub**: [@DILEEP-DXD](https://github.com/DILEEP-DXD)
+- **LinkedIn**: [Dileep Kumar Donthireddy](https://www.linkedin.com/in/dileep-kumar-donthireddy)
+- **Email**: dileepkumarreddy2007@gmail.com

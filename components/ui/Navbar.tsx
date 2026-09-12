@@ -35,7 +35,7 @@ export function Navbar() {
 
   return (
     <>
-      <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled && !menuOpen ? "bg-white/90 backdrop-blur-md py-3 border-b border-[var(--color-border)]" : "bg-transparent py-5 border-b border-transparent"}`}>
+      <header className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled && !menuOpen ? "bg-white/50 backdrop-blur-[40px] py-5 md:py-6 border-b border-[var(--color-border)]" : "bg-transparent py-6 md:py-8 border-b border-transparent"}`}>
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-5 md:px-10 lg:px-16">
           
           {/* Logo */}

@@ -108,32 +108,36 @@ export function Hero() {
           {/* ---- Currently Exploring (Right) ---- */}
           <div className="lg:col-span-4 flex items-end lg:justify-end mt-12 lg:mt-0 lg:pt-32">
             <ScrollReveal delay={0.2} className="w-full h-full relative">
-              <div className="border-l border-white/30 pl-6 py-5 lg:pl-8 relative z-10 drop-shadow-md">
-                <p className="font-mono text-xs tracking-[0.16em] text-white/80">CURRENTLY EXPLORING</p>
-                <div className="mt-4 min-h-[5.5rem] flex items-center">
+              <div className="backdrop-blur-xl bg-white/5 border border-white/20 rounded-2xl p-6 lg:p-8 relative z-10 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50 pointer-events-none" />
+                <p className="font-mono text-[10px] sm:text-xs tracking-[0.2em] text-white/80 font-semibold mb-2 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[var(--color-accent-green)] animate-pulse shadow-[0_0_8px_var(--color-accent-green)]"></span>
+                  CURRENTLY EXPLORING
+                </p>
+                <div className="mt-4 min-h-[5.5rem] flex items-center relative z-10">
                   <AnimatePresence mode="wait">
                     <motion.p
                       key={activeTopic}
-                      initial={{ opacity: 0, y: 10 }}
+                      initial={{ opacity: 0, y: 15 }}
                       animate={{ opacity: 1, y: 0 }}
-                      exit={{ opacity: 0, y: -10 }}
-                      transition={{ duration: 0.3 }}
-                      className="text-xl md:text-2xl font-bold leading-tight text-white"
+                      exit={{ opacity: 0, y: -15 }}
+                      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                      className="text-lg md:text-xl font-medium leading-relaxed text-white drop-shadow-sm"
                     >
                       {EXPLORING_TOPICS[activeTopic]}
                     </motion.p>
                   </AnimatePresence>
                 </div>
-                <div className="mt-6 flex gap-2">
+                <div className="mt-8 flex gap-2 relative z-10">
                   {EXPLORING_TOPICS.map((_, idx) => (
                     <button
                       key={idx}
                       onClick={() => setActiveTopic(idx)}
                       aria-label={`View exploring topic ${idx + 1}`}
-                      className={`h-2 transition-all duration-300 drop-shadow-sm ${
+                      className={`h-1.5 rounded-full transition-all duration-500 shadow-sm ${
                         activeTopic === idx 
-                          ? "w-12 bg-white" 
-                          : "w-4 bg-white/40 hover:bg-white/70"
+                          ? "w-8 bg-white" 
+                          : "w-3 bg-white/30 hover:bg-white/60"
                       }`}
                     />
                   ))}
