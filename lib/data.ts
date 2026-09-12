@@ -3,6 +3,14 @@
 // Edit here, not in JSX. Typed for safety.
 // ============================================================
 
+// GitHub Pages serves this site under /portfolio (project pages, not a
+// username.github.io repo), and next/image's automatic basePath prefixing
+// is unreliable when images.unoptimized is true (static export mode).
+// Prefixing local asset paths here explicitly avoids broken images.
+// If you switch to a custom domain or rename the repo to
+// <username>.github.io, set this back to "".
+const BASE_PATH = "/portfolio";
+
 // ----- Hero (01) -----
 export const HERO = {
   eyebrow: "// 01 — Hello",
@@ -21,7 +29,7 @@ export const HERO = {
     linkedin: "https://www.linkedin.com/in/dileep-kumar-donthireddy",
     email: "mailto:dileepkumarreddy2007@gmail.com",
   },
-  headshot: "/dileep-pic.jpg",
+  headshot: `${BASE_PATH}/dileep-pic.jpg`,
 } as const;
 
 // ----- About (02) -----
@@ -87,7 +95,7 @@ export const PROJECTS: { eyebrow: string; heading: string; cards: Project[]; git
     {
       title: "Music Playlist Manager",
       date: "Jul '26",
-      cover: "/visuals/playlist-manager.jpg",
+      cover: `${BASE_PATH}/visuals/playlist-manager.jpg`,
       problem:
         "Standard playlist logic doesn't support smooth, continuous forward/backward navigation or looping.",
       approach:
@@ -100,7 +108,7 @@ export const PROJECTS: { eyebrow: string; heading: string; cards: Project[]; git
     {
       title: "Sea-Tra",
       date: "Jun '26",
-      cover: "/visuals/sea-tra.jpg",
+      cover: `${BASE_PATH}/visuals/sea-tra.jpg`,
       problem:
         "Missing a DSA lecture on CodeTantra meant either losing the content or sitting through a full recording to find out if it mattered.",
       approach:
@@ -113,7 +121,7 @@ export const PROJECTS: { eyebrow: string; heading: string; cards: Project[]; git
     {
       title: "Flow Me",
       date: "Dec '25",
-      cover: "/visuals/flow-me.jpg",
+      cover: `${BASE_PATH}/visuals/flow-me.jpg`,
       problem:
         "Researching a complex question well means breaking it down, finding sources, and synthesizing — most tools skip straight to a single shallow answer.",
       approach:
@@ -132,7 +140,7 @@ export const TRAINING = {
   heading: "Training",
   card: {
     title: "Data Structures & Algorithms with C++",
-    image: "/visuals/dsa-blueprint.jpg",
+    image: `${BASE_PATH}/visuals/dsa-blueprint.jpg`,
     meta: "Jun '26 – Jul '26 · Certificate",
     badge: "Completed",
     bullets: [
@@ -161,28 +169,28 @@ export const CERTIFICATES: { eyebrow: string; heading: string; cards: Certificat
       title: "Database Management Systems Part-1",
       issuer: "Infosys Springboard",
       date: "Dec '25",
-      image: "/certificates/dbms.jpg",
+      image: `${BASE_PATH}/certificates/dbms.jpg`,
       verifyUrl: "https://drive.google.com/file/d/1Iop_KN35f1Q9FOht3Gmoorh_-x7Fo8cY/view",
     },
     {
       title: "Java Programming",
       issuer: "Iam Neo",
       date: "Sep '25",
-      image: "/certificates/java.jpg",
+      image: `${BASE_PATH}/certificates/java.jpg`,
       verifyUrl: "https://drive.google.com/file/d/1yaVqxek-DPMh1YDGEtnFVYVspDm8hV8v/view",
     },
     {
       title: "Data Structures and Algorithms in C++",
       issuer: "Iam Neo",
       date: "Nov '25",
-      image: "/certificates/dsa-cpp.jpg",
+      image: `${BASE_PATH}/certificates/dsa-cpp.jpg`,
       verifyUrl: "https://drive.google.com/file/d/1nArq9P47o2R_S7Q8Nh2j0afnW3Tp2gBI/view?usp=sharing",
     },
     {
       title: "Programming in C++",
       issuer: "Infosys Springboard",
       date: "Nov '25",
-      image: "/certificates/programming-cpp.jpg",
+      image: `${BASE_PATH}/certificates/programming-cpp.jpg`,
       verifyUrl: "https://drive.google.com/file/d/1OVAt17AhRljHvCh1oc_txrowg5OYHrDw/view",
     }
   ],
