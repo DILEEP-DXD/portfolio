@@ -14,7 +14,7 @@ export const HERO = {
   badge: "🟢 Open to opportunities",
   cta: {
     primary: { label: "View Projects", href: "#projects" },
-    secondary: { label: "Download Resume", href: "/resume.pdf" },
+    secondary: { label: "Download Resume", href: "https://drive.google.com/file/d/1HuZWhYhjMx3a3_flccVQ2gBlJwaighrj/view?usp=sharing" },
   },
   socials: {
     github: "https://github.com/DILEEP-DXD",
