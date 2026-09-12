@@ -67,7 +67,16 @@ export function Contact() {
             {/* Form Column (1 column) */}
             <div className="lg:col-span-1 flex flex-col justify-center">
               <ScrollReveal delay={0.4}>
-                <form className="flex flex-col gap-5 bg-white/50 backdrop-blur-md border border-[var(--color-border)] p-8 rounded-2xl shadow-sm">
+                <form 
+                  action="https://formsubmit.co/dileepkumarreddy2007@gmail.com" 
+                  method="POST"
+                  className="flex flex-col gap-5 bg-white/50 backdrop-blur-md border border-[var(--color-border)] p-8 rounded-2xl shadow-sm"
+                >
+                  {/* FormSubmit Configuration */}
+                  <input type="hidden" name="_subject" value="New message from your Portfolio!" />
+                  <input type="hidden" name="_captcha" value="false" />
+                  <input type="text" name="_honey" style={{ display: 'none' }} />
+
                   <div className="flex flex-col gap-2">
                     <label htmlFor="name" className="text-[10px] font-bold tracking-[0.15em] text-[var(--color-text-heading)] uppercase">Name</label>
                     <input type="text" id="name" name="name" placeholder="John Doe" className="w-full bg-transparent border-b border-[var(--color-border)] py-2 text-sm focus:outline-none focus:border-[var(--color-accent-green)] transition-colors placeholder:text-[var(--color-text-muted)] text-[var(--color-text-heading)]" required />
